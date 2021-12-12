@@ -1,0 +1,14 @@
+.contenedor-tarjetas{
+    display: grid !important;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-top: 20px;
+}
+@media screen and (max-width: 900px) {
+    .contenedor-tarjetas{
+             
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+} 

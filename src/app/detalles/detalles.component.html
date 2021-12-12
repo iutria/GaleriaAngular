@@ -1,0 +1,19 @@
+<app-secondary-nav></app-secondary-nav>
+<div class="container padding">
+    <div class="contenido-imagen">
+        <p class="tags"><span class="cursor-mano" (click)="ir(item)" *ngFor="let item of tags">{{item}}</span></p>
+        <img class="foto" [src]="datos?.largeImageURL" alt="">
+    </div>
+    <div class="datos-usuario">
+        <a target="_blank" href="https://pixabay.com/es/users/{{datos?.user}}-{{datos?.user_id}}">
+            <img [src]="datos?.userImageURL" alt="">
+            <span>{{datos?.user}}</span>
+        </a>
+        <div class="detalles-imagen">
+            <span><i class="bi bi-heart-fill"></i><br>{{datos?.likes}}</span>
+            <span><i class="bi bi-eye-fill"></i><br>{{datos?.views}}</span>
+            <span><i class="bi bi-download"></i><br>{{datos?.downloads}}</span>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
