@@ -1,25 +1,9 @@
-
-<div class="card" style="width: 18rem;">
-    <img [src]="datos.webformatURL" class="card-img-top" alt="...">
-    <div class="position-user-data">
-        <img class="userFoto" [src]="datos.userImageURL" alt="">
-    </div>
-    <div class="card-body">
-        <h5 class="card-title"><i class="bi bi-person-circle"></i> {{datos.user}}</h5>
-        <p class="card-text">{{datos.tags}}</p>
-        <div class="row">
-            <div class="col center">
-                <i class="bi bi-heart-fill" style="color:#c0392b"></i><br>
-                <span>{{datos.likes}}</span>
-            </div>
-            <div class="col center">
-                <i class="bi bi-eye-fill" style="color:#2c3e50"></i><br>
-                <span>{{datos.views}}</span>
-            </div>
-            <div class="col center">
-                <i class="bi bi-cloud-arrow-down-fill" style="color: #2980b9;"></i><br>
-                <span>{{datos.downloads}}</span>
-            </div>
-        </div>
-    </div>
+<span class="info">
+    <button class="cursor-mano info-item" (click)="ir(item)" *ngFor="let item of tags">{{item}}</button>
+</span>
+<img [src]="datos.webformatURL" class="imagen" alt="...">
+<img class="userFoto" [src]="datos.userImageURL" alt="">
+<div class="descripcion">
+    <i class="bi bi-heart-fill" style="color:#c0392b"></i>
+    <span>{{datos.likes}}</span>
 </div>

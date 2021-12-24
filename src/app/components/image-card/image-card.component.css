@@ -1,27 +1,46 @@
-.card-img-top{
-    height: 250px !important;
+.imagen{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-.like{
-    color: #ecf0f1;
-    background:  #e74c3c;
-}
-.center{
-    text-align: center;
-}
 .userFoto{
+    position: absolute;
     width: 50px;
     height: 50px;
+    bottom: 10px;
+    left: 10px;
     border-radius: 50%;
+    object-fit: cover;
+    background: white;
 }
-.position-user-data{
-    top: 190px;
-    right: 10px;
+.info{
     position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(52, 73, 94,0.2);    
+    text-align: center;
+    width: 100%;
+    z-index: 900;
 }
-.background-Green{
-    background: #16a085;
+.info .info-item{
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
 }
-.card{
-    cursor: pointer;
+.info .info-item:hover{
+    background: rgba(44, 62, 80,0.5);
+    border-radius: 3px;
+}
+.descripcion{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }

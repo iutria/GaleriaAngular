@@ -16,3 +16,8 @@
 .input-group{
     width: 70%;
 }
+@media screen and (max-width: 700px) {
+    .select{
+        width: 10px;
+    }
+}

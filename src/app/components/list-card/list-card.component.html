@@ -1,3 +1,11 @@
-<div class="contenedor-tarjetas">
-    <app-image-card [routerLink]="['/','detalles',item?.id]" [datos]="item" *ngFor='let item of cards'></app-image-card>
+<div class="contenedor-tarjetas" *ngIf="cards.length!=0;else loggedOut">
+    <app-image-card [ngClass]="[i, c, getclass()]" [routerLink]="['/','detalles',item?.id]" [datos]="item" *ngFor='let item of cards'></app-image-card>
 </div>
+<ng-template #loggedOut>
+    <div class="no-encontrado">
+        <img src="assets/error.png" alt="">
+        <br>
+        <span>Oops!</span> <br>
+        <p>No hemos encontrado resultados para esta búsqueda</p>
+    </div>
+</ng-template>

@@ -8,20 +8,12 @@ import { Router } from '@angular/router';
   templateUrl: './secondary-nav.component.html',
   styleUrls: ['./secondary-nav.component.css']
 })
-export class SecondaryNavComponent implements OnInit {
-  textoDeInput: string='';
-  tipo:string='';
-  
+export class SecondaryNavComponent implements OnInit { 
   ngOnInit(): void {}  
   constructor(public router: Router){}
-  pornerTexto(txtBuscar:any):void{
-    this.textoDeInput=txtBuscar.value;
+  ir(txtBuscar:any,tipo:any):void{
+    var tipoBusqueda = tipo.value!=''?'&category='+tipo.value:'';
+    var busqueda=txtBuscar.value;
+    this.router.navigate(['/images/',busqueda+tipoBusqueda]);
   }
-  ir():void{
-    this.router.navigate(['/images/',this.textoDeInput+this.tipo]);
-  }
-  ponerTipo(tipo:any){
-    this.tipo=tipo.value!=''?'&category='+tipo.value:'';
-  }
-
 }

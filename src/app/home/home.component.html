@@ -7,7 +7,7 @@
     <div class="input-group input-group-lg">
         <button type="button" class="btn btn-light" (click)="ir()"><i class="bi bi-search"></i></button>
         <input #txtBuscar (keyup)="pornerTexto(txtBuscar)" (keyup.enter)="ir()" type="text" class="form-control" placeholder="Busca imágenes">
-        <select #tipo (change)="ponerTipo(tipo)" class="input-group-text cursor-mano">
+        <select #tipo (change)="ponerTipo(tipo)" class="input-group-text cursor-mano select">
              <option value="">Todos</option>
              <option value='backgrounds'>backgrounds</option>
              <option value='fashion'>fashion</option>
@@ -37,7 +37,7 @@
     </p>
 </div>
 <app-banner></app-banner>
-<div class="container">
-    <app-list-card></app-list-card>
-</div>
+
+<app-list-card></app-list-card>
+
 <app-footer></app-footer>

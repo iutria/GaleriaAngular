@@ -26,6 +26,9 @@ export class DetallesComponent implements OnInit {
   private cargarDatos(id: string) {
     this.PeticionesServiceService.get('&id=' + id)?.subscribe(values => {
       this.datos = values.hits[0];
+      if(this.datos.userImageURL==''){
+        this.datos.userImageURL='https://cdn-icons.flaticon.com/png/512/2815/premium/2815428.png?token=exp=1639356406~hmac=ccf6e48b46f6b2d22b195e608cdfdf8c';
+      }
       console.log(this.datos)
       this.tags = this.datos.tags.split(',');      
     },error=> {

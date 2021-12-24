@@ -12,9 +12,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="d-flex" style=" width: 100%;">               
         <div class="input-group ">
-          <button type="button" class="btn btn-success" (click)="ir()"><i class="bi bi-search"></i></button>
-          <input #txtBuscar (keyup)="pornerTexto(txtBuscar)" (keyup.enter)="ir()" type="text" class="form-control" placeholder="Busca imágenes">
-          <select #tipo (change)="ponerTipo(tipo)" class="input-group-text cursor-mano ">
+          <button type="button" class="btn btn-success" (click)="ir(txtBuscar,tipo)"><i class="bi bi-search"></i></button>
+          <input #txtBuscar (keyup.enter)="ir(txtBuscar,tipo)" type="text" class="form-control" placeholder="Busca imágenes">
+          <select #tipo class="input-group-text cursor-mano ">            
                <option value="">Todos</option>
                <option value='backgrounds'>backgrounds</option>
                <option value='fashion'>fashion</option>
