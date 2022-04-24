@@ -2,6 +2,8 @@
     width: 100%;
     border-radius: 10px;
     min-height: 500px;
+    border-image-width: auto;
+    object-fit: cover;
 }
 .padding{
     padding: 20px;
@@ -57,4 +59,23 @@
 }
 .datos-usuario a:hover{
     opacity: 70%;
+}
+
+@media screen and (max-width: 500px) {
+    .datos-usuario{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .datos-usuario a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .detalles-imagen{
+        position: relative;
+    }
 }

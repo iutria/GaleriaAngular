@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" [routerLink]="['']"
       style="display: flex; justify-content: center; align-items: center; gap: 10px;">
@@ -7,37 +7,41 @@
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="d-flex" style=" width: 100%;">               
+    <div class="collapse navbar-collapse items-nav" id="navbarSupportedContent">
+      <div class="d-flex content-items" style=" width: 100%;">               
         <div class="input-group ">
-          <button type="button" class="btn btn-success" (click)="ir(txtBuscar,tipo)"><i class="bi bi-search"></i></button>
-          <input #txtBuscar (keyup.enter)="ir(txtBuscar,tipo)" type="text" class="form-control" placeholder="Busca imágenes">
-          <select #tipo class="input-group-text cursor-mano ">            
-               <option value="">Todos</option>
-               <option value='backgrounds'>backgrounds</option>
-               <option value='fashion'>fashion</option>
-               <option value='nature'>nature</option>
-               <option value='science'>science</option>
-               <option value='education'>education</option>
-               <option value='feelings'>feelings</option>
-               <option value='health'>health</option>
-               <option value='people'>people</option>
-               <option value='religion'>religion</option>
-               <option value='places'>places</option>
-               <option value='animals'>animals</option>
-               <option value='industry'>industry</option>
-               <option value='computer'>computer</option>
-               <option value='food'>food</option>
-               <option value='sports'>sports</option>
-               <option value='transportation'>transportation</option>
-               <option value='travel'>travel</option>
-               <option value='buildings'>buildings</option>
-               <option value='business'>business</option>
-               <option value='music'>music</option>
-          </select>
-      </div>
+          <input #txtBuscar (keyup.enter)="ir(txtBuscar,tipo)" type="text" class="input-buscar" placeholder="Busca imágenes">
+          <div class="boton-select">
+            <button type="button" class="boton-buscar" (click)="ir(txtBuscar,tipo)"><i class="bi bi-search"></i></button>
+            <select #tipo class="lista-tipos cursor-mano ">            
+              <option value="">Todos</option>
+              <option value='backgrounds'>backgrounds</option>
+              <option value='fashion'>fashion</option>
+              <option value='nature'>nature</option>
+              <option value='science'>science</option>
+              <option value='education'>education</option>
+              <option value='feelings'>feelings</option>
+              <option value='health'>health</option>
+              <option value='people'>people</option>
+              <option value='religion'>religion</option>
+              <option value='places'>places</option>
+              <option value='animals'>animals</option>
+              <option value='industry'>industry</option>
+              <option value='computer'>computer</option>
+              <option value='food'>food</option>
+              <option value='sports'>sports</option>
+              <option value='transportation'>transportation</option>
+              <option value='travel'>travel</option>
+              <option value='buildings'>buildings</option>
+              <option value='business'>business</option>
+              <option value='music'>music</option>
+            </select>
+          </div>
+        </div>
       </div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end" style="width: 100%;">
         <li class="nav-item">
